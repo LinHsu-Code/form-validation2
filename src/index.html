@@ -8,8 +8,8 @@
   </head>
   <body>
     <header>
-      <h1>Form Validation Part I</h1>
-      <h2>The HTML and CSS</h2>
+      <h1>Form Validation</h1>
+      <h2>The HTML CSS & JS</h2>
     </header>
     <main>
       <!--
@@ -35,17 +35,23 @@
         pattern
         novalidate
       -->
-      <form name="sampleForm" action="#" method="POST" autocomplete="off">
+      <form
+        name="sampleForm"
+        action="#"
+        method="POST"
+        autocomplete="off"
+        novalidate
+      >
         <p>
-          <label for="fullname">Full Name</label>
+          <label for="username">Username Name</label>
           <input
             type="text"
             inputmode="text"
-            id="fullname"
-            name="fullname"
+            id="username"
+            name="username"
             enterkeyhint="next"
             autocomplete="off"
-            placeholder="Enter your full name"
+            placeholder="Enter a username"
             required
           />
           <span class="instructions"><span class="errMessage"></span></span>
@@ -62,7 +68,10 @@
             placeholder="Enter your email address"
             required
           />
-          <span class="instructions"><span class="errMessage"></span></span>
+          <span class="instructions">
+            <span class="errMessage"> </span>
+            <span class="gmail">A valid Gmail address</span>
+          </span>
         </p>
         <p>
           <label for="pass">Password</label>
@@ -76,14 +85,14 @@
             minlength="8"
             required
           />
-          <span class="instructions"
-            ><span class="errMessage"></span>
+          <span class="instructions">
+            <span class="errMessage"></span>
             <span class="upper">At least ONE uppercase letter</span>
             <span class="lower">At least ONE lowercase letter</span>
             <span class="num">At least ONE number</span>
             <span class="len">At least 10 characters long</span>
-            <span class="invalid"
-              >Only allowed special characters are ! @ # $ % ^ & * ( ) . , ? ; :
+            <span class="invalid">
+              Only allowed special characters are ! @ # $ % ^ & * ( ) . , ? ; :
               ~
             </span>
           </span>
@@ -113,6 +122,20 @@
             <option value="es" lang="es">Español</option>
             <option value="fr" lang="fr">Français</option>
           </select>
+          <span class="instructions"><span class="errMessage"></span></span>
+        </p>
+        <p>
+          <label for="regcode">One-time-code</label>
+          <input
+            type="text"
+            id="regcode"
+            name="regcode"
+            enterkeyhint="next"
+            autocomplete="off"
+            minlength="8"
+            maxlength="8"
+            title="enter your one-time code here"
+          />
           <span class="instructions"><span class="errMessage"></span></span>
         </p>
         <p>

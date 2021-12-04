@@ -34,7 +34,7 @@ form {
   margin: auto;
 }
 form > p {
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -106,6 +106,10 @@ button {
   align-items: flex-start;
   color: #ccc;
 }
+
+.instructions .errMessage {
+  color: red;
+}
 .instructions span {
   padding-left: 2rem;
 }
@@ -113,7 +117,7 @@ input:focus,
 select:focus,
 textarea:focus {
   /* field currently has focus */
-  background-color: gold;
+  /* background-color: gold; */
 }
 input:read-only {
   /* field marked as read-only */
@@ -128,32 +132,41 @@ input:required,
 select:required,
 option:required {
   /* input field IS marked as required */
-  border-color: red;
+  /* border-color: red; */
 }
+
+input:required + .instructions::before {
+  content: "* required";
+  display: inline-block;
+  color: red;
+  font-size: 1.2rem;
+}
+
 input:optional {
   /* input field not marked as required */
 }
 :placeholder-shown {
   /* placeholder is showing... not user text */
-  background-color: lightpink;
+  /* background-color: lightpink; */
 }
 ::placeholder {
   /* style the placeholder text */
-  letter-spacing: 1rem;
+  /* letter-spacing: 1rem; */
 }
 input:valid {
   /* passed all validation based on validityState properties */
-  background-color: cornflowerblue;
+  /* background-color: cornflowerblue; */
 }
 input:invalid {
   /* failed some validation */
-  border-left: 4px solid hsl(0, 50%, 50%);
-  background-color: hsl(0, 50%, 70%);
+  /* border-left: 4px solid hsl(0, 50%, 50%); */
+  /* background-color: hsl(0, 50%, 70%); */
 }
 :in-range {
   /* value is the right length and not too long or short */
 }
 :out-of-range {
   /* value too short, too long, too small or too big */
-  border-right: 2rem solid black;
+  /* border-right: 2rem solid black; */
+  /* background-color: rebeccapurple; */
 }
