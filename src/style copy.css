@@ -33,8 +33,8 @@ form {
   border: 2px solid orangered;
   margin: auto;
 }
-.form-item-wrapper {
-  padding: 1rem 2rem;
+form > p {
+  padding: 0.5rem 2rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -43,46 +43,11 @@ form {
   /* for the underlay */
   position: relative;
   z-index: 1;
-  /* overflow: hidden; */
+  overflow: hidden;
   /* for the label to inherit */
   color: #eee;
 }
-
-.input-wrapper {
-  position: relative;
-  width: 100%;
-}
-
-.input-wrapper .tips {
-  position: absolute;
-  right: 0;
-  height: 1.2rem;
-  width: 1.2rem;
-  line-height: 1.2rem;
-  background: red;
-  border-radius: 0.6rem;
-  text-align: center;
-  display: none;
-  right: 0.5rem;
-  top: 50%;
-  transform: translateY(-50%) scale(0.83);
-}
-
-.tips:hover::after {
-  content: "Choose a username 6–30 characters long. Your username can only contain letters or numbers and should not start with a number.";
-  position: absolute;
-  display: block;
-  width: 10rem;
-  top: 0;
-  right: 0;
-  z-index: 99;
-  color: red;
-  background: #ddd;
-}
-.input-wrapper > input:invalid + .tips {
-  display: block;
-}
-.form-item-wrapper::before {
+form p::before {
   content: "";
   position: absolute;
   top: 0;
@@ -94,12 +59,12 @@ form {
   transform: translateX(-110%);
   transition: transform 0.2s ease-out;
 }
-.form-item-wrapper:focus-within {
+form p:focus-within {
   /* for the label to inherit */
   color: #fff;
   text-shadow: 1px 1px 1px #000;
 }
-.form-item-wrapper:focus-within::before {
+form p:focus-within::before {
   transform: translateX(0);
 }
 label {
@@ -115,7 +80,7 @@ input {
   font-size: 1.2rem;
   flex-basis: 100%;
   width: calc(100% - 2px);
-  padding: 0.25rem 2rem 0.25rem 1rem;
+  padding: 0.25rem 1rem;
   border-radius: 0.25rem;
 }
 select,
@@ -195,13 +160,8 @@ input:valid {
 input:invalid {
   /* failed some validation */
   /* border-left: 4px solid hsl(0, 50%, 50%); */
-  /* background-color: hsl(0, 18%, 43%); */
+  /* background-color: hsl(0, 50%, 70%); */
 }
-
-.input-wrapper input:invalid {
-  border-bottom: 0.2rem solid red;
-}
-
 :in-range {
   /* value is the right length and not too long or short */
 }

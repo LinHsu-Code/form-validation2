@@ -42,23 +42,21 @@
         autocomplete="off"
         novalidate
       >
-        <div class="form-item-wrapper">
-          <label for="username">Username</label>
-          <div class="input-wrapper">
-            <input
-              type="text"
-              inputmode="text"
-              id="username"
-              name="username"
-              enterkeyhint="next"
-              autocomplete="off"
-              placeholder="Enter your username"
-              required
-            />
-            <span class="tips">❗</span>
-          </div>
-        </div>
-        <div class="form-item-wrapper">
+        <p>
+          <label for="username">Username Name</label>
+          <input
+            type="text"
+            inputmode="text"
+            id="username"
+            name="username"
+            enterkeyhint="next"
+            autocomplete="off"
+            placeholder="Enter a username"
+            required
+          />
+          <span class="instructions"><span class="errMessage"></span></span>
+        </p>
+        <p>
           <label for="email">Email</label>
           <input
             type="email"
@@ -74,8 +72,8 @@
             <span class="errMessage"> </span>
             <span class="gmail">A valid Gmail address</span>
           </span>
-        </div>
-        <div class="form-item-wrapper">
+        </p>
+        <p>
           <label for="pass">Password</label>
           <input
             type="password"
@@ -98,8 +96,8 @@
               ~
             </span>
           </span>
-        </div>
-        <div class="form-item-wrapper">
+        </p>
+        <p>
           <label for="cell">Cellphone</label>
           <input
             type="text"
@@ -112,8 +110,8 @@
             required
           /><!-- input type=number adds the stepper -->
           <span class="instructions"><span class="errMessage"></span></span>
-        </div>
-        <div class="form-item-wrapper">
+        </p>
+        <p>
           <label for="lang">Language</label>
           <select id="lang" autocomplete="off">
             <option value="">Choose a Language</option>
@@ -125,8 +123,8 @@
             <option value="fr" lang="fr">Français</option>
           </select>
           <span class="instructions"><span class="errMessage"></span></span>
-        </div>
-        <div class="form-item-wrapper">
+        </p>
+        <p>
           <label for="regcode">One-time-code</label>
           <input
             type="text"
@@ -139,8 +137,8 @@
             title="enter your one-time code here"
           />
           <span class="instructions"><span class="errMessage"></span></span>
-        </div>
-        <div class="form-item-wrapper">
+        </p>
+        <p>
           <label for="pets">Number of Pets</label>
           <input
             type="number"
@@ -154,10 +152,10 @@
             step="2"
           /><!-- input type=number adds the stepper -->
           <span class="instructions"><span class="errMessage"></span></span>
-        </div>
-        <div class="form-item-wrapper">
+        </p>
+        <p>
           <button id="btnSend">Send</button>
-        </div>
+        </p>
       </form>
     </main>
   </body>
